@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+    body {
+        margin:0;
+    }
+    #imagen {
+        width: 100vw;
+        height: 100vh;
+        
+    }
+</style>
+<script>
+
+    var imagenes=new Array(
+
+        ['img/1.jpg'],
+
+        ['img/2.jpg'],
+
+        ['img/3.jpg'],
+
+        ['img/4.jpg']
+
+    );
+
+    var index= 0;
+
+    function rotarImagenes()
+
+    {
+
+    if (index<imagenes.length) { 
+        document.getElementById("imagen").src=imagenes[index];
+        index++;
+    } else {
+        index = 0;
+    }
+
+
+}
+
+
+    onload=function()
+
+    {
+
+        rotarImagenes();
+
+        setInterval(rotarImagenes,5000);
+
+    }
+
+</script>
+
+</head>
+
+ 
+
+<body>
+
+ 
+
+<img src="" id="imagen"></a>
+
+ 
+
+</body>
+
+</html>
